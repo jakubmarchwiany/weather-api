@@ -9,6 +9,7 @@
 		".commitlint.config.cjs",
 		"src/__tests__/generator",
 		"dist",
-		"cspell.json"
+		"cspell.json",
+		"test"
 	]
 }
