@@ -39,3 +39,4 @@ lerna-debug.log*
 .env.*
 .eslintcache
 .cspellcache
+secrets
