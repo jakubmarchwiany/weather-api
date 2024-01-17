@@ -1,0 +1,14 @@
+{
+	"dictionaries": ["typescript", "css"],
+	"language": "en",
+	"words": ["knip", "nestframework", "nestjs"],
+	"ignorePaths": [
+		"node_modules",
+		"build",
+		"bun.lockb",
+		".commitlint.config.cjs",
+		"src/__tests__/generator",
+		"dist",
+		"cspell.json"
+	]
+}
