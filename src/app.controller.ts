@@ -1,12 +1,12 @@
-import { Controller, Get, Query, ValidationPipe } from "@nestjs/common";
-import { AxiosResponse } from "axios";
-import { Observable } from "rxjs";
+import { CacheInterceptor } from "@nestjs/cache-manager";
+import { Controller, Get, Query, UseInterceptors, ValidationPipe } from "@nestjs/common";
 
 import { AppService } from "./app.service";
 import { GetWeatherInfoDto } from "./dto/get-weather-info.dto";
 import { WeatherInfo } from "./model/weatherInfo.type";
 
 @Controller()
+@UseInterceptors(CacheInterceptor)
 export class AppController {
 	constructor(private readonly appService: AppService) {}
 
