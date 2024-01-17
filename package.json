@@ -10,11 +10,8 @@
 		"start:dev": "nest start --watch",
 		"start:debug": "nest start --debug --watch",
 		"start:prod": "node dist/main",
-		"test": "jest",
-		"test:watch": "jest --watch",
-		"test:cov": "jest --coverage",
-		"test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-		"test:e2e": "jest --config ./test/jest-e2e.json",
+		"tests": "NODE_ENV=test bun test",
+		"tests:dev": "NODE_ENV=test bun --watch test",
 		"lint": "eslint ./src --cache",
 		"lint:fix": "eslint ./src --fix --cache",
 		"lint:knip": "knip",
@@ -39,13 +36,13 @@
 		"rxjs": "^7.8.1"
 	},
 	"devDependencies": {
+		"bun-types": "^1.0.21",
 		"@commitlint/cli": "^18.4.4",
 		"@commitlint/config-conventional": "^18.4.4",
 		"@nestjs/cli": "^10.0.0",
 		"@nestjs/schematics": "^10.0.0",
 		"@nestjs/testing": "^10.0.0",
 		"@types/express": "^4.17.17",
-		"@types/jest": "^29.5.2",
 		"@types/node": "^20.3.1",
 		"@types/supertest": "^6.0.0",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -56,7 +53,6 @@
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-deprecation": "^2.0.0",
 		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-jest": "^27.6.1",
 		"eslint-plugin-jsdoc": "^48.0.2",
 		"eslint-plugin-jsonc": "^2.11.2",
 		"eslint-plugin-n": "^16.6.2",
@@ -68,33 +64,14 @@
 		"eslint-plugin-sort-keys-fix": "latest",
 		"eslint-plugin-typescript-sort-keys": "latest",
 		"husky": "^8.0.3",
-		"jest": "^29.5.0",
 		"jsonc-eslint-parser": "^2.4.0",
 		"mkcert": "^3.2.0",
 		"prettier": "^3.0.0",
 		"source-map-support": "^0.5.21",
-		"supertest": "^6.3.3",
-		"ts-jest": "^29.1.0",
+		"supertest": "^6.3.4",
 		"ts-loader": "^9.4.3",
 		"ts-node": "^10.9.1",
 		"tsconfig-paths": "^4.2.0",
 		"typescript": "^5.1.3"
-	},
-	"jest": {
-		"moduleFileExtensions": [
-			"js",
-			"json",
-			"ts"
-		],
-		"rootDir": "src",
-		"testRegex": ".*\\.spec\\.ts$",
-		"transform": {
-			"^.+\\.(t|j)s$": "ts-jest"
-		},
-		"collectCoverageFrom": [
-			"**/*.(t|j)s"
-		],
-		"coverageDirectory": "../coverage",
-		"testEnvironment": "node"
 	}
 }
