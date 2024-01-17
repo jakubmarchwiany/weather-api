@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-extraneous-class */
+import { HttpModule } from "@nestjs/axios";
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 
@@ -7,7 +8,7 @@ import { AppService } from "./app.service";
 
 @Module({
 	controllers: [AppController],
-	imports: [ConfigModule.forRoot()],
+	imports: [ConfigModule.forRoot(), HttpModule],
 	providers: [AppService]
 })
 export class AppModule {}

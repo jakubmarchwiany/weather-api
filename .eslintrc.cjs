@@ -42,6 +42,7 @@ module.exports = {
 				project: "./tsconfig.eslint.json"
 			},
 			rules: {
+				"@typescript-eslint/no-throw-literal": "off",
 				"@typescript-eslint/await-thenable": "off",
 				"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 				"@typescript-eslint/explicit-function-return-type": "error",
@@ -154,6 +155,7 @@ module.exports = {
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/interface-name-prefix": "off",
 		"@typescript-eslint/no-explicit-any": "off",
+
 		// These off/less-strict-by-default rules work well for this repo and we like them on.
 		"@typescript-eslint/no-unused-vars": [
 			"error",
