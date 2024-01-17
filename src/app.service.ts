@@ -39,7 +39,7 @@ export class AppService {
 			condition: data.weather[0].main,
 			date: new Date(Number(data.dt * 1000 + data.timezone * 1000)),
 			humidity: data.main.humidity,
-			temperature: (Math.round(data.main.temp * 10) / 10).toFixed(0),
+			temperature: Number((Math.round(data.main.temp * 10) / 10).toFixed(0)),
 			windSpeed: data.wind.speed
 		} as unknown as WeatherInfo;
 
